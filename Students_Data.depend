@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1575026711 source:c:\users\kijoo-pc\students_data\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
