@@ -35,6 +35,59 @@ Student *students;
 int newAge, id_number;
 char section;
 
+// Here will be all function's name
+int menu();
+char *studentFromUser();
+Student createStudent(char *newstudent, int age, int id_number, char section);
+void addSubject(Student *student);
+void studentDetails(Student student);
+void addStudent(Student student);
+int findStudent(char *st);
+void editMark(int stdNum, int choice, int mark);
+void case1();
+int case2();
+void case3();
+
+
+// the main function which contain all function we will use
+int main()
+{
+    printf("Welcome to students details application \n");
+
+    while (1)
+    {
+        int choice = menu();  // to print menu and store the choice into
+
+        switch (choice)  // to check what is the choice
+        {
+        case 1:  // if the choice is equal 1
+            case1();  // call the function to do what happen if the choice is 1
+            break;
+
+        case 2:  // if the choice is equal 2
+            case2();  // call the function to do what happen if the choice is 2
+            break;
+
+        case 3:  // if the choice is equal 3
+            case3();  // call the function to do what happen if the choice is 3
+            break;
+
+        case -1:  // if the choice is equal -1
+            exit(1);  // to end the program
+            break;
+
+        default:  // else print invalid input
+            printf("INVALID INPUT -1 TO EXIT !!!");
+            break;
+
+        }
+
+    }
+
+    return 0;
+}
+
+
 // this function will print options for user
 int menu()
 {
@@ -241,42 +294,4 @@ void case3()
         }
 
     } while (choice != -1);
-}
-
-// the main function which contain all function we will use
-int main()
-{
-    printf("Welcome to students details application \n");
-
-    while (1)
-    {
-        int choice = menu();  // to print menu and store the choice into
-
-        switch (choice)  // to check what is the choice
-        {
-        case 1:  // if the choice is equal 1
-            case1();  // call the function to do what happen if the choice is 1
-            break;
-
-        case 2:  // if the choice is equal 2
-            case2();  // call the function to do what happen if the choice is 2
-            break;
-
-        case 3:  // if the choice is equal 3
-            case3();  // call the function to do what happen if the choice is 3
-            break;
-
-        case -1:  // if the choice is equal -1
-            exit(1);  // to end the program
-            break;
-
-        default:  // else print invalid input
-            printf("INVALID INPUT -1 TO EXIT !!!");
-            break;
-
-        }
-
-    }
-
-    return 0;
 }
